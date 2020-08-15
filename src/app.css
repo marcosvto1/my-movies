@@ -2,14 +2,4 @@
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/blue.css';
 
-.ns-root {
-  --bg-color: #252a2e;
-  --white: #fff; 
-  --gray: #aaaaaa;
-  --white-ligth: #e7e7e7;
-  --primary: '#ff5576';
-}
-
-.ns-landscape {
-  --bg-color: #252a2e;
-}
+@import "common_styles.css";
