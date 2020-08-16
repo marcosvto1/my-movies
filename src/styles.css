@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "common_styles.css";
 
-p {
-  background-color: var(--ligth-color-one);
+h1, h4 {
+  border-left: 5px solid var(--ligth-color-one);
+  padding-left: 7px;
+}
+
+body {
+  padding-bottom: 70px;
 }

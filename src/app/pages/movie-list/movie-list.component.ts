@@ -30,6 +30,13 @@ export class MovieListComponent implements OnInit {
       rating: 1,
       toWatchNext: true
     },
+    {
+      id: 3,
+      title: 'Vampiro',
+      obs: 'as trança da vovo careca',
+      rating: 1,
+      toWatchNext: true
+    },
   ];
 
   constructor() { }

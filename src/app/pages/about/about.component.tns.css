@@ -1,27 +1,25 @@
-/* Add mobile styles for the component here.  */
 Page {
-  background-color: var(--bg-color);
+  background-color: var(--dark-color-one);
   text-align: center;
   padding: 20;
-  android-status-bar-background: var(--bg-color);
 }
 
-ActionBar {
-  background-color: var(--bg-color);  
-  flat: true;
+Image {
+  margin: 0 50;
 }
 
 .title {
   font-size: 18;
   margin-top: 70;
-  color: var(--gray);
-  font-weight: bold;
+  color: var(--dark-color-five);
+  font-weight: 900;
+  text-wrap: true;
 }
 
 .course-name {
   font-size: 21;
   margin-top: 10;
-  color: var(--white-ligth);
+  color: var(--light-color-three);
   font-weight: 900;
   text-wrap: true;
 }
@@ -29,14 +27,11 @@ ActionBar {
 .description {
   font-size: 18;
   margin-top: 30;
-  color: var(--gray);
+  color: var(--dark-color-five);
   text-wrap: true;
 }
 
 Button {
   margin-top: 70;
-  background-color: #ff5576;
-  border-radius: 10;
-  color: var(--white);
-  font-weight: 900;
+  background-color:var(--light-color-one);
 }

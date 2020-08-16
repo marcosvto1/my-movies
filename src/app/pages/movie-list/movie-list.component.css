@@ -1,0 +1,7 @@
+.movie-container {
+  height: 170px;
+}
+
+.movie-container .card-title {
+  color: var(--ligth-color-one);
+}
