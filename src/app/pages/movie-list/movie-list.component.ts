@@ -58,6 +58,27 @@ export class MovieListComponent implements OnInit {
       rating: 1,
       toWatchNext: false
     },
+    {
+      id: 6,
+      title: 'Vampiro 3',
+      obs: 'as trança da vovo careca as trança da vovo careca as trança da vovo careca as trança da vovo careca as trança da vovo careca',
+      rating: 1,
+      toWatchNext: false
+    },
+    {
+      id: 6,
+      title: 'Vampiro 3',
+      obs: 'as trança da vovo careca as trança da vovo careca as trança da vovo careca as trança da vovo careca as trança da vovo careca',
+      rating: 1,
+      toWatchNext: false
+    },
+    {
+      id: 6,
+      title: 'Vampiro 3',
+      obs: 'as trança da vovo careca as trança da vovo careca as trança da vovo careca as trança da vovo careca as trança da vovo careca',
+      rating: 1,
+      toWatchNext: false
+    },
   ];
 
   constructor() { }

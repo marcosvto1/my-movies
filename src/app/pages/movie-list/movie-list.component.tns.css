@@ -41,7 +41,6 @@ ListView {
   background-color: transparent;
   separator-color: transparent; /* native-script */
   height: 100%; /* Boa pratica render mais rapido*/
-
 }
 
 ListView .movie-container {
