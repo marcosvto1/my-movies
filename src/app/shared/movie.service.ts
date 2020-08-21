@@ -14,11 +14,11 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getAll(urlParams = ''): Observable<Movie[]> {
-    const url = `${this.basePath}?${urlParams}`;
+    const url = this.basePath + '?' + urlParams;
 
-    return this.http.get<Movie[]>(url).pipe(
+    return this.http.get(url).pipe(
       map(this.jsonDataToMovies),
-      map(movies => movies.sort((a, b) => b.id - a.id )),
+      map(movies => movies.sort((a, b) => b.id - a.id)),
       catchError(this.handleError)
     );
   }
@@ -69,7 +69,7 @@ export class MovieService {
 
   private jsonDataToMovies(jsonData: any): Movie[] {
     const movies: Movie[] = [];
-    for (let i: number; i < jsonData.length; i++) {
+    for (let i = 0; i < jsonData.length; i++) {
       movies.push(Movie.fromJson(jsonData[i]));
     }
     return movies;

@@ -7,8 +7,10 @@
 <div class="rounded shadow-lg p-3">
   <h1>GERENCIAR FILMES</h1>
   <h4 class="text-muted">Cadastre, edit, ou remova filmes da sua lista</h4>
-
-  <div class="row">
+  <div *ngIf="loading" class="row justify-content-center">
+    <p>Carregando</p>
+  </div>
+  <div *ngIf="loading == false" class="row" #listMovies>
     <div *ngFor="let movie of movies" class="col-md-6 mt-4">
       <div class="card movie-container">
         <div class="card-body">

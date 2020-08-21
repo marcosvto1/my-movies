@@ -10,6 +10,7 @@ import { MovieService } from './../../shared/movie.service';
 export class MovieListComponent implements OnInit {
 
   movies: Movie[] = [];
+  loading = true;
 
   constructor(
     private movieService: MovieService
@@ -21,8 +22,9 @@ export class MovieListComponent implements OnInit {
 
   loadMovies() {
     this.movieService.getAll().subscribe(
-      (result) => {
-        this.movies = result;
+      (movies) => {
+        this.movies = movies;
+        this.loading = false;
       },
       (error) => {}
     );

@@ -10,7 +10,7 @@ export class Movie {
   ) {}
 
   public static fromJson(jsonData: any): Movie {
-    return Object.assign(new Movie(), {...jsonData});
+    return Object.assign(new Movie(), jsonData);
   }
 
   public toogleMovieWatchNext() {
