@@ -9,6 +9,7 @@ import { MovieService } from './../../shared/movie.service';
 })
 export class MovieListComponent implements OnInit {
 
+  newMovieTitle = '';
   movies: Movie[] = [];
   loading = true;
 
@@ -18,6 +19,21 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() {
     this.loadMovies();
+  }
+
+  createMovie() {
+    if (!this.newMovieTitle) { return; }
+    const movie = Movie.fromJson({title: this.newMovieTitle});
+    this.movieService.create(movie).subscribe(
+      (movie) => {
+        this.movies.unshift(movie);
+        this.newMovieTitle = '';
+      },
+      (error) => {
+        console.log(error);
+        alert('Ocorreu um erro!');
+      }
+    );
   }
 
   loadMovies() {
