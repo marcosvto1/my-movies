@@ -9,18 +9,28 @@
   </ActionBar>
 
   <StackLayout>
+
+    <!-- new movie container -->
+    <GridLayout class="new-movie-container" columns="*, auto" >
+      <TextField col="0" hint="Titulo do Filme" [(ngModel)]="newMovieTitle"></TextField>
+      <Button col="1" (tap)="createMovie()" text="+"></Button>
+    </GridLayout>
+
     <ListView [items]="movies">
       <ng-template let-movie="item">
         <GridLayout class="movie-container" columns="auto, *, auto">
           <Label class="movie-rating" col="0" text="{{ movie.rating }} ⭐"></Label>
+          
           <StackLayout col="1">
             <Label class="movie-title" [text]="movie.title"></Label>
             <Label class="movie-obs" [text]="movie.obs"></Label>
           </StackLayout>
+          
           <StackLayout col="2" class="movie-actions">
             <Label class="delete-movie-btn" text="❌"></Label>
             <Label class="watch-next-flag" [class.marked]="movie.toWatchNext" text="🍿"></Label>
           </StackLayout>
+        
         </GridLayout>
       </ng-template>
     </ListView>
