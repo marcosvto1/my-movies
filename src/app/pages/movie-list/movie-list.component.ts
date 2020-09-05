@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from './../../shared/movie.model';
 import { MovieService } from './../../shared/movie.service';
+import { MovieListHelper } from '@src/app/pages/movie-list/movie-list.helper';
 
 @Component({
   selector: 'app-movie-list',
@@ -36,14 +37,16 @@ export class MovieListComponent implements OnInit {
     );
   }
 
-  deleteMovie(movie: Movie) {
+  async deleteMovie(movie: Movie) {
     const message = `Deseja realmente excluir o filme ${movie.title}?`;
-    const mustDelete = confirm(message);
+    const mustDelete = await MovieListHelper.showDeleteConfirmation(message);
+
     if (mustDelete) {
       this.movieService.delete(movie).subscribe(
         (_) => this.movies = this.movies.filter((item) => item !== movie )
-      )
+      );
     }
+
   }
 
   loadMovies() {
