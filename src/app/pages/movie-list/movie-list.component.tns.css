@@ -11,7 +11,7 @@ ActionBar .show-drawer-btn {
   text-align: left;
   margin-top: 10;
   width: 30;
-  padding: 0;
+  padding: 2;
   background-color: transparent;
   android-elevation: 0; /* native-script */
   color: var(--dark-color-five)

@@ -49,7 +49,13 @@ export class MovieListComponent implements OnInit {
 
   }
 
-  loadMovies() {
+  toogleMovieWatchNext(movie: Movie) {
+    this.movieService.toggleMovieWatchNext(movie).subscribe();
+  }
+
+  // privates methods
+
+  private loadMovies() {
     this.movieService.getAll().subscribe(
       (movies) => {
         this.movies = movies;

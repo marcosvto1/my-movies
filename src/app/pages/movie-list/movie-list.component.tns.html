@@ -3,7 +3,7 @@
     <GridLayout rows="* , *, *">
       <Button text="☰" class="show-drawer-btn" row="0"></Button>
       <Label text="GERENCIAR FILMES" class="page-title" row="1"></Label>
-      <Label text="Cadastre, edit, ou remova filmes da sua lista" class="page-subtitle" row="2"></Label>
+      <Label text="Cadastre, edite, ou remova filmes da sua lista" class="page-subtitle" row="2"></Label>
 
     </GridLayout>
   </ActionBar>
@@ -28,7 +28,7 @@
           
           <StackLayout col="2" class="movie-actions">
             <Label class="delete-movie-btn" (tap)="deleteMovie(movie)" text="❌"></Label>
-            <Label class="watch-next-flag" [class.marked]="movie.toWatchNext" text="🍿"></Label>
+            <Label class="watch-next-flag" (tap)="toogleMovieWatchNext(movie)" [class.marked]="movie.toWatchNext" text="🍿"></Label>
           </StackLayout>
         
         </GridLayout>
